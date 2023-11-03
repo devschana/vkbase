@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png"
+        href="https://i.ibb.co/T8SZYQD/300249654-478005041004841-8973428443532716611-n.png" />
+    <title>DEVSUPPORT</title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .btn {
+            border-radius: 100px;
+            margin-bottom: 10px;
+            height: 50px;
+            background-color: #03A9F4;
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Darker background on mouse-over */
+        .btn:hover {
+            background-color: #0288C5;
+        }
+
+        #customers {
+            margin-bottom: 1%;
+            margin-top: 1%;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #7e1416;
+            color: white;
+        }
+
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #7e1416;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        .faq-heading {
+            border-bottom: #777;
+            padding: 20px 60px;
+        }
+
+        .faq-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        .hr-line {
+            width: 90%;
+            margin: auto;
+        }
+
+        /* Style the buttons that are used to open and close the faq-page body */
+        .faq-page {
+            /* background-color: #eee; */
+            color: #444;
+            cursor: pointer;
+            padding: 30px 20px;
+            width: 90%;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            margin: auto;
+
+        }
+
+        .faq-body {
+            margin: auto;
+            /* text-align: center; */
+            width: 80%;
+            padding: auto;
+
+        }
+
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active,
+        .faq-page:hover {
+            background-color: #F9F9F9;
+        }
+
+        /* Style the faq-page panel. Note: hidden by default */
+        .faq-body {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+
+        .faq-page:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <img class="center" style="height: 100px;margin-top: 1%;"
+            src="https://i.ibb.co/T8SZYQD/300249654-478005041004841-8973428443532716611-n.png" />
+        <table id="customers">
+            <tr>
+
+                <th>คำถามที่พบบ่อย</th>
+            </tr>
+
+
+        </table>
+        <main>
+            <section class="faq-container">
+                <div class="faq-two">
+
+                    <!-- faq question -->
+                    <h1 class="faq-page">เครือข่าย DTAC</h1>
+
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <u>ขั้นตอนการสมัคโปรเสริมใช้งาน</u>
+                        <p>วิธีใช้งานเบบละเอียด : <a href="https://youtu.be/ZcPLSugI_hs" target="_blank">คลิกเพื่อดู</a>
+                        </p>
+                        <p>วิธีใช้งานเบบย่อ : <a href="https://lin.ee/Rel2ytq" target="_blank">คลิกเพื่อดู</a></p>
+                        <p>เว็บสมัครใช้เเทนเเอป Dtac : <a href="https://dtac.co.th/s/flexy"
+                                target="_blank">คลิกเพื่อเปิด</a></p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div class="faq-two">
+
+                    <!-- faq question -->
+                    <h1 class="faq-page">โปรเสริมเน็ต</h1>
+
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <p>ซิมทรู กันรั่วหรือกันกินเงิน: กด *935*99# เเล้วโทรออก (ฟรี)</p>
+                        <p>ซิมดีเเทค กันรั่วหรือกันกินเงิน: กด *117*30# เเล้วโทรออก (30วัน/20บาท)</p>
+                        <p>ซิมเอไอเอส กันรั่วหรือกันกินเงิน: กด *777 เเล้วโทรออก กด 1 -> กด 7(โปรอีซี่เน็ต) -> กด 1
+                            ยืนยัน</p>
+                        <p style="color: red;">*กรณีสมัครเพื่อเพิ่มเวลาเเอปเลือกสมัครเน็ตราคาที่ถูกที่สุดก็เพียงพอ</p>
+                        <p>ซิมทรู :<a href="https://www.truemoveonline.com/pronet-true-days/" target="_blank">
+                                คลิกเพื่อดู</a></p>
+                        <p>ซิมดีเเทค :<a
+                                href="https://www.dtac.co.th/dtac-promotion/packages/internetbooster.html?bnid=20150708796"
+                                target="_blank"> คลิกเพื่อดู</a></p>
+                        <p>ซิมเอไอเอส : โปรเสริม AIS PLAY กด *777*885# 64บาท (รวม VAT) ต่อเดือน</p>
+
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div class="faq-one">
+
+                    <!-- faq question -->
+                    <h1 class="faq-page">สิ่งที่ควรทำหลังจากติดตั้งเเอป?</h1>
+
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <p>1. ควรมีสัญญาณ Internet เพื่อโหลดข้อมูลครั้งเเรก</p>
+                        <p>2. ทำการตั้งค่ามือถือตามคลิป <a href="https://youtu.be/-6U7s0id54w"
+                                target="_blank">คลิกเพื่อดู</a></p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div class="faq-two">
+
+                    <!-- faq question -->
+                    <h1 class="faq-page">IOS [IPHONE, IPAD] ใช้งานได้ไหม?</h1>
+
+                    <!-- faq answer -->
+
+                    <div class="faq-body">
+                        <p>ใช้งานได้ ให้ทำตามขั้นตอนตามนี้ <a href="https://chaychana.com/info/setup/ios/"
+                                target="_blank">คลิกเพื่อดู</a></p>
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="hr-line">
+                <div class="faq-three">
+
+                    <!-- faq question -->
+                    <h1 class="faq-page">มีปัญหา ช้าเชื่อมต่อไม่ได้หรืออื่น ๆ ทำอย่างไร?</h1>
+
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <p>1. ทำการปิดการเชื่อมต่อ -> เปิดโหมดเครื่องบิน -> ปิดโหมดเครื่องบินเเละเชื่อมต่อใหม่อีกครั้ง
+                        </p>
+                        <p>2. เช็กวันใช้งานในซิมว่าหมดอายุหรือไม่</p>
+                        <p>3. ไปที่เมนูเลือก เครื่องมือ -> รีเซ็ตข้อมูล</p>
+                        <p>4. เเก้ไขเครือข่ายซิม <a href="https://youtube.com/shorts/RVaAJeGj__0?feature=share"
+                                target="_blank">คลิกเพื่อดู</a></p>
+                        <p>5. เเก้ไข APN เครื่องมือ -> APN -> คลิก จุดสามจุด มุมขวาบน -> รีเซ็ต</p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div class="faq-three">
+
+                    <!-- faq question -->
+                    <h1 class="faq-page">ทำไมเเอปชอบปิดการใช้งานหรือหลุด?</h1>
+
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <p>ทำการตั้งค่ามือถือตามคลิป <a href="https://youtu.be/-6U7s0id54w"
+                                target="_blank">คลิกเพื่อดู</a></p>
+                    </div>
+                </div>
+
+                <hr class="hr-line">
+                <div class="faq-three">
+
+                    <!-- faq question -->
+                    <h1 class="faq-page">ทำไมเชื่อมต่อใช้งานได้เเต่ติดๆ ดับๆ?</h1>
+
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <p>มีการเข้าใช้งานซ้อนจาก ยูสเซอร์เนม เดียวกันให้ติดต่อเเอดมินเพื่อทำการเปลี่ยน รหัสผ่าน</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+        <p style="text-align: center;">Copyright 2022© ชัยชนะ เเอปพลิเคชั่น(ประเทศไทย)จำกัด</p>
+        <script>
+            function let_download(url) {
+                window.open(url, "_blank");
+            }
+
+
+        </script>
+    </div>
+
+    <script>
+        var faq = document.getElementsByClassName("faq-page");
+        var i;
+
+        for (i = 0; i < faq.length; i++) {
+            faq[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var body = this.nextElementSibling;
+                if (body.style.display === "block") {
+                    body.style.display = "none";
+                } else {
+                    body.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
